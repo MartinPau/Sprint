@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treadmill Sync Training</title>
+    <!-- Modern Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Side: YouTube Video -->
+        <div class="video-section">
+            <div id="player"></div>
+        </div>
+
+        <!-- Right Side: Progression Map -->
+        <div class="chart-section">
+            <div class="chart-header">
+                <h1>Workout Progression</h1>
+                <div class="stats">
+                    <div class="stat-box">
+                        <span class="stat-label">Time</span>
+                        <span class="stat-value" id="time-display">00:00</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">Current Speed</span>
+                        <div class="speed-control">
+                            <button id="speed-down" class="control-btn">-</button>
+                            <span class="stat-value" id="speed-display">-</span>
+                            <button id="speed-up" class="control-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <!-- Bars will be injected here via JS -->
+                <div id="bar-chart" class="chart"></div>
+            </div>
+            
+            <div class="chart-footer">
+                <span class="label-start">Start</span>
+                <button id="export-btn" class="export-btn">Copy Workout</button>
+                <span class="label-end">End</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Logic -->
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
